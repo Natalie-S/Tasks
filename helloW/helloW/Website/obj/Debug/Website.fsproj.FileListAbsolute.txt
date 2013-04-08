@@ -1,5 +1,0 @@
-C:\Users\Natalie\documents\visual studio 2010\Projects\helloW\helloW\Website\bin\Debug\Website.dll
-C:\Users\Natalie\documents\visual studio 2010\Projects\helloW\helloW\Website\bin\Debug\Website.pdb
-C:\Users\Natalie\documents\visual studio 2010\Projects\helloW\helloW\Website\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Natalie\documents\visual studio 2010\Projects\helloW\helloW\Website\obj\Debug\Website.dll
-C:\Users\Natalie\documents\visual studio 2010\Projects\helloW\helloW\Website\obj\Debug\Website.pdb
