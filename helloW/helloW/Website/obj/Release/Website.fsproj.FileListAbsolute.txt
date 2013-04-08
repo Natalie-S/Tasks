@@ -1,0 +1,5 @@
+C:\Users\Natalie\Documents\Visual Studio 2010\Projects\helloW\helloW\Website\bin\Release\Website.dll
+C:\Users\Natalie\Documents\Visual Studio 2010\Projects\helloW\helloW\Website\bin\Release\Website.pdb
+C:\Users\Natalie\Documents\Visual Studio 2010\Projects\helloW\helloW\Website\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Natalie\Documents\Visual Studio 2010\Projects\helloW\helloW\Website\obj\Release\Website.dll
+C:\Users\Natalie\Documents\Visual Studio 2010\Projects\helloW\helloW\Website\obj\Release\Website.pdb
