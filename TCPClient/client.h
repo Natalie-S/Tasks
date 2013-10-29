@@ -1,22 +1,18 @@
-#ifndef CLIENT_H
-#define CLIENT_H
-
-#include <QObject>
+#pragma once
+#include <QtCore/QObject>
 
 class QTcpSocket;
 
 class Client : public QObject
 {
-Q_OBJECT
-public:
-    explicit Client(QObject *parent = 0);
-    void connectToServer();
-signals:
+    Q_OBJECT
+    public:
+        explicit Client(QObject *parent = 0);
+        void connectToServer();
+    signals:
 
-public slots:
-    void on_connected();
-private:
-    QTcpSocket* socket;
+    public slots:
+        void onConnected();
+    private:
+        QTcpSocket *mSocket;
 };
-
-#endif // CLIENT_H

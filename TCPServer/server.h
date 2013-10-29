@@ -1,26 +1,24 @@
-#ifndef SERVER_H
-#define SERVER_H
+#pragma once
+#include <QtCore/QObject>
 
-#include <QObject>
 class QTcpServer;
+
 class QTcpSocket;
 
 class Server : public QObject
 {
-Q_OBJECT
-public:
-explicit Server(QObject *parent = 0);
-void listen();
-signals:
+    Q_OBJECT
+    public:
+        explicit Server(QObject *parent = 0);
+        void listen();
+    signals:
 
-public slots:
-void on_newConnection();
-void on_readyRead();
-void on_disconnected();
-private:
-QTcpServer* server;
-QTcpSocket* socket;
-
+    public slots:
+        void onNewConnection();
+        void onReadyRead();
+        void onDisconnected();
+    private:
+        QTcpServer *mServer;
+        QTcpSocket *mSocket;
 };
 
-#endif // SERVER_H

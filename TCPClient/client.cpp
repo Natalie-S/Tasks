@@ -1,33 +1,30 @@
 #include "client.h"
-#include <QTcpSocket>
-#include <QHostAddress>
+
+#include <QtNetwork/QTcpSocket>
+#include <QtNetwork/QHostAddress>
 #include <cstdio>
 
-Client::Client(QObject *parent) :
-QObject(parent)
+Client::Client(QObject *parent)
+    : QObject(parent)
 {
-    socket = new QTcpSocket(this);
-    connect(socket, SIGNAL(connected()),
-    this, SLOT(on_connected()));
+    mSocket = new QTcpSocket(this);
+    connect(mSocket, SIGNAL(connected()), this, SLOT(onConnected()));
 }
 
-void Client::on_connected()
-{
+void Client::onConnected() {
     printf("Connection established.\n");
     char buffer[1024];
-    forever
-    {
+    forever {
         printf(">> ");
         gets(buffer);
-        int len = strlen(buffer);
+        unsigned len = strlen(buffer);
         buffer[len] = '\n';
         buffer[len+1] = '\0';
-        socket->write(buffer);
-        socket->flush();
+        mSocket->write(buffer);
+        mSocket->flush();
     }
 }
 
-void Client::connectToServer()
-{
-    socket->connectToHost(QHostAddress::LocalHost, 1234);
+void Client::connectToServer() {
+    mSocket->connectToHost(QHostAddress::LocalHost, 1234);
 }
